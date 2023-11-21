@@ -51,8 +51,11 @@ body{
     margin: 0.5rem;
 }
 
-#climate{
+#climate, #country{
     font-size: 1.75rem;
+}
+#climate-desc{
+    font-size: 1rem;
     padding-bottom: 2rem;
 }
 

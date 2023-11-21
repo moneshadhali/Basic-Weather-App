@@ -1,8 +1,11 @@
 let loc = document.getElementById('location');
+let country = document.getElementById('country');
 let tempIcon = document.getElementById('temp-icon');
 let tempValue = document.getElementById('temp-value');
 let climate = document.getElementById('climate');
+let climateD = document.getElementById('climate-desc');
 let iconFile;
+
 
 function setWeatherIcon(id, tempIcon) {
     if(id < 250){
@@ -40,9 +43,12 @@ window.addEventListener("load",()=>{
                     let {name} = data;
                     let {feels_like} = data.main;
                     let {id, main, description} = data.weather[0];
+                    let {country} = data.sys;
                     loc.textContent = name;
                     tempValue.textContent = Math.round(feels_like-273);
                     climate.textContent = main;
+                    climateD.textContent = `Weather like: ${description}`;
+                    country.textContent = `(${country})`;
                     setWeatherIcon(id, tempIcon);
                 })
         })
