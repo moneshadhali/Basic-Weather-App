@@ -33,7 +33,7 @@ window.addEventListener("load",()=>{
         navigator.geolocation.getCurrentPosition((position)=>{
             long = position.coords.longitude;
             lat = position.coords.latitude;
-            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=52d64dcfed45f8b90671a581df99781c`;
+            const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=878398b5a1f68c708531aa266d743b2f`;
             fetch(api)
                 .then((response)=>{
                     return response.json();
