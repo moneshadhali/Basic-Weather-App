@@ -54,3 +54,5 @@ window.addEventListener("load",()=>{
         })
     }
 })
+
+// API used from https://openweathermap.org/
